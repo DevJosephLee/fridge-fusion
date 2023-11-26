@@ -17,9 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={arvo.className}>
         <Nav />
-        <main>
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   )
