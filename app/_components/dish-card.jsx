@@ -1,31 +1,39 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Card, Col, Row, Button } from 'react-bootstrap'
+import { AccessTime, Whatshot } from '@mui/icons-material'
+import { Card, Col, Row, Button, Container } from 'react-bootstrap'
 
 export default function DishCard(props) {
   return (
-    <Card className="shadow">
-      <Row style={{ position: "relative", height: "200px"}}>
+    <Card className="shadow rounded-3 h-100">
+      <div style={{ position: "relative", height: "200px"}}>
         <Image
           src={props.src}
           alt={props.title}
           fill
           style={{ objectFit: "cover" }}
+          className="rounded-top-3"
         />
+      </div>
+      <Row className="mb-2 flex-grow-1 pt-4 px-4">
+        <h5>{props.title}</h5>
       </Row>
-      <Row>
-        <h4>{props.title}</h4>
-      </Row>
-      <Row>
+      <Row className="mb-3 text-muted px-4">
         <Col>
-          <p>{props.readyInMinutes}&nbsp;min</p>
+          <div className="d-flex align-items-center">
+            <AccessTime />
+            <label>&nbsp;{props.readyInMinutes}&nbsp;min</label>
+          </div>
         </Col>
         <Col>
-          <p>{props.calories}&nbsp;Calories</p>
+          <div className="d-flex align-items-center">
+            <Whatshot />
+            <label>&nbsp;{props.calories}&nbsp;Calories</label>
+          </div>
         </Col>
       </Row>
-      <Row>
-        <Button variant="outline-primary">VIEW RECIPE</Button>
+      <Row className="px-4 pb-4">
+        <Button variant="outline-warning rounded-pill">VIEW RECIPE</Button>
       </Row>
     </Card>
   )
