@@ -7,30 +7,30 @@ export default async function Home() {
   const data = await res.json();
 
   return (
-    <Container>
-      <Row className="align-items-center">
-        <Col style={{ position: "relative", height: "450px" }}>
-          <Image
-            src={`https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/image/upload/v1700869483/katie-smith-uQs1802D0CQ-unsplash_n7wgwf.jpg`}
-            alt="Home"
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-          />
+    <Container className="my-4">
+      <Row className="align-items-center mb-3 d-block d-md-flex">
+        <Col className="mb-4 mb-md-0">
+          <div style={{ position: "relative", height: "350px" }}>
+            <Image
+              src={`https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/image/upload/v1700869483/katie-smith-uQs1802D0CQ-unsplash_n7wgwf.jpg`}
+              alt="Home"
+              fill
+              style={{ objectFit: "cover" }}
+              priority
+              className="rounded-3"
+            />
+          </div>
         </Col>
-        <Col>
-          <Row>
+        <Col className="d-flex justify-content-center">
+          <Row className="col-12 col-xl-8">
             <h1>Enter Ingredients, Get Inspired, and Start Cooking!</h1>
           </Row>
-          <Row>
-
-          </Row>
         </Col>
       </Row>
-      <Row>
-        <h2>Popular Dishes</h2>
+      <Row className="mb-3 d-flex text-center text-md-start">
+        <h2 className="text-decoration-underline">Popular Dishes</h2>
       </Row>
-      <Row>
+      <Row className="mb-3">
         {
           data.recipes.map(randomRecipeData => {
             const randomRecipeProps = {
@@ -40,7 +40,7 @@ export default async function Home() {
               calories: randomRecipeData.summary.split("calories")[0].split("<b>").pop().replace(" ", "")
             }
             return (
-              <Col key={randomRecipeData.id}>
+              <Col key={randomRecipeData.id} className="flex-basis mb-4 mb-xl-0">
                 <DishCard {...randomRecipeProps} />
               </Col>
             )
