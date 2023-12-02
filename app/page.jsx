@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Col, Container, Row } from 'react-bootstrap'
 import DishCard from './_components/dish-card';
+import SearchInput from './_components/search-input';
 
 export default async function Home() {
   const res = await fetch(`https://api.spoonacular.com/recipes/random?number=4&apiKey=${process.env.NEXT_PUBLIC_SPOONACULAR_API_KEY}`);
@@ -22,8 +23,9 @@ export default async function Home() {
           </div>
         </Col>
         <Col className="d-flex justify-content-center">
-          <Row className="col-12 col-xl-8">
-            <h1>Enter Ingredients, Get Inspired, and Start Cooking!</h1>
+          <Row className="col-12 col-xl-8 justify-content-center">
+            <h1 className="mb-5">Enter Ingredients, Get Inspired, and Start Cooking!</h1>
+            <SearchInput />
           </Row>
         </Col>
       </Row>
