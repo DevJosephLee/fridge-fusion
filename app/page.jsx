@@ -9,7 +9,7 @@ export default async function Home() {
 
   return (
     <Container className="my-4">
-      <Row className="align-items-center mb-3 d-block d-md-flex">
+      <Row className="align-items-center mb-5 mb-md-3 d-block d-md-flex">
         <Col className="mb-4 mb-md-0">
           <div style={{ position: "relative", height: "350px" }}>
             <Image
@@ -24,7 +24,7 @@ export default async function Home() {
         </Col>
         <Col className="d-flex justify-content-center">
           <Row className="col-12 col-xl-8 justify-content-center">
-            <h1 className="mb-5">Enter Ingredients, Get Inspired, and Start Cooking!</h1>
+            <h1 className="mb-3 mb-md-5">Enter Ingredients, Get Inspired, and Start Cooking!</h1>
             <SearchInput />
           </Row>
         </Col>
