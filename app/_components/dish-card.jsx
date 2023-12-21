@@ -19,6 +19,7 @@ export default function DishCard(props) {
           fill
           style={{ objectFit: "cover" }}
           className="rounded-top-3"
+          sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33.3vw"
         />
       </div>
       <Row className="mb-2 flex-grow-1 pt-4 px-4">

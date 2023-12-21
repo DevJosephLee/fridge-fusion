@@ -19,6 +19,7 @@ export default async function Home() {
               style={{ objectFit: "cover" }}
               priority
               className="rounded-3"
+              sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33.3vw"
             />
           </div>
         </Col>
