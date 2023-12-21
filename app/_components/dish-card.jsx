@@ -1,9 +1,15 @@
+"use client"
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { AccessTime, Whatshot } from '@mui/icons-material'
 import { Card, Col, Row, Button, Container } from 'react-bootstrap'
+import { usePathname } from 'next/navigation'
 
 export default function DishCard(props) {
+  const pathname = usePathname();
+  const cardDetails = pathname.includes("search") ? "invisible" : "visible";
+
   return (
     <Card className="shadow rounded-3 h-100">
       <div style={{ position: "relative", height: "200px"}}>
@@ -18,7 +24,7 @@ export default function DishCard(props) {
       <Row className="mb-2 flex-grow-1 pt-4 px-4">
         <h5>{props.title}</h5>
       </Row>
-      <Row className="mb-3 text-muted px-4">
+      <Row className={"mb-3 text-muted px-4 " + cardDetails}>
         <Col>
           <div className="d-flex align-items-center">
             <AccessTime />
