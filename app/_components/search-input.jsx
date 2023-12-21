@@ -31,7 +31,7 @@ export default function SearchInput() {
           />
         </Col>
         <Col className="col-1 d-flex justify-content-center">
-          <Clear />
+          <Clear onClick={() => setInputValue('')}/>
         </Col>
       </Row>
     </form>
