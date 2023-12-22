@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation'
 
 export default function DishCard(props) {
   const pathname = usePathname();
-  const cardDetails = pathname.includes("search") ? "invisible" : "visible";
+  const cardDetails = pathname.includes("search") || pathname.includes("recipes") ? "invisible" : "visible";
 
   return (
     <Card className="shadow rounded-3 h-100">
