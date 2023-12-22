@@ -21,7 +21,7 @@ export default async function SearchResult({ params }) {
               src: recipeData.image
             }
             return (
-              <Col key={recipeData.id} className="flex-basis mb-4">
+              <Col md={12} lg={6} xl={4} key={recipeData.id} className="flex-basis mb-4">
                 <DishCard {...recipeProps} />
               </Col>
             )
