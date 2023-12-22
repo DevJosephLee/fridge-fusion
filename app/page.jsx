@@ -37,13 +37,14 @@ export default async function Home() {
         {
           data.recipes.map(randomRecipeData => {
             const randomRecipeProps = {
+              id: randomRecipeData.id,
               src: randomRecipeData.image,
               title: randomRecipeData.title,
               readyInMinutes: randomRecipeData.readyInMinutes,
               calories: randomRecipeData.summary.split("calories")[0].split("<b>").pop().replace(" ", "")
             }
             return (
-              <Col key={randomRecipeData.id} className="flex-basis mb-4 mb-xl-0">
+              <Col md={12} lg={6} xl={4} key={randomRecipeData.id} className="flex-basis mb-4 mb-xl-0">
                 <DishCard {...randomRecipeProps} />
               </Col>
             )
