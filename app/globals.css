@@ -36,6 +36,18 @@ input:focus {
   outline: none;
 }
 
+.slick-track {
+  margin-left: 0;
+}
+
+.slick-slide {
+  padding: 0 12px;
+}
+
+.slick-slider {
+  padding: 0;
+}
+
 @media only screen and (min-width: 576px) {
   .flex-basis {
     flex-basis: 100%;
