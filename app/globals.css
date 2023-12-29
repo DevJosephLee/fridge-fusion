@@ -37,7 +37,7 @@ input:focus {
 }
 
 .slick-track {
-  margin-left: 0;
+  margin-left: 0 !important;
 }
 
 .slick-slide {
