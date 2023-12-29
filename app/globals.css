@@ -16,6 +16,14 @@ a {
   text-decoration: none;
 }
 
+input {
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
 .navbar {
   background-color: white;
 }
@@ -25,27 +33,26 @@ a {
   text-underline-offset: 12px;
 }
 
-.flex-basis {
-  flex-basis: 100%;
-}
-input {
-  border: none;
-}
-
-input:focus {
-  outline: none;
-}
-
 .slick-track {
   margin-left: 0 !important;
+  display: flex !important;
 }
 
 .slick-slide {
   padding: 0 12px;
+  height: inherit !important;
+}
+
+.slick-slide > div {
+  height: 100%;
 }
 
 .slick-slider {
   padding: 0;
+}
+
+.flex-basis {
+  flex-basis: 100%;
 }
 
 @media only screen and (min-width: 576px) {
