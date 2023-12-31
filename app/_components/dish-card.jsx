@@ -40,14 +40,13 @@ export default function DishCard(props) {
         </Col>
       </Row>
       <Row className="px-4 pb-4">
-        <Button variant="outline-warning rounded-pill">
-          <Link
-            href={'/recipes/[query]'}
-            as={`/recipes/${props.id}`}
-          >
-            VIEW RECIPE
-          </Link>
-        </Button>
+        <Link
+          className="btn btn-outline-warning rounded-pill"
+          href={'/recipes/[query]'}
+          as={`/recipes/${props.id}`}
+        >
+          VIEW RECIPE
+        </Link>
       </Row>
     </Card>
   )
