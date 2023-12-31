@@ -51,6 +51,32 @@ input:focus {
   padding: 0;
 }
 
+.slick-prev,
+.slick-next {
+  z-index: 1;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+}
+
+.nutrition-carousel .slick-prev {
+  left: -15px;
+}
+
+.nutrition-carousel .slick-next {
+  right: -15px;
+}
+
+.equipment-carousel .slick-prev {
+  left: 20px;
+}
+
+.equipment-carousel .slick-next {
+  right: 20px;
+}
+
 .flex-basis {
   flex-basis: 100%;
 }

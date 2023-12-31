@@ -46,7 +46,7 @@ export default function NutritionCarousel({ props }) {
   };
 
   return (
-    <Slider {...settings}>
+    <Slider className="nutrition-carousel" {...settings}>
       {
         props.map(nutrition => {
           return (

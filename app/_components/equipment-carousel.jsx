@@ -39,7 +39,7 @@ export default function EquipmentCarousel({ props }) {
   };
 
   return (
-    <Slider {...settings}>
+    <Slider className="equipment-carousel" {...settings}>
       {
         props.map(equipment => {
           equipment.name = equipment.name.split(" ").map(word => {
