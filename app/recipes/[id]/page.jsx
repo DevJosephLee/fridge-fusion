@@ -42,6 +42,8 @@ export default async function Recipes({ params }) {
     return recipeData.nutrition.nutrients[index];
   });
 
+  const noEquipMsg = uniqueEquipments.length >= 1 ? <EquipmentCarousel props={uniqueEquipments} /> : <label className="fst-italic">Equipment Data Not Available</label>;
+
   return (
     <Container className="my-4">
       <Row className="align-items-center mb-5 mb-md-3 d-flex flex-column-reverse flex-md-row">
@@ -94,7 +96,7 @@ export default async function Recipes({ params }) {
         <h2 className="text-decoration-underline">Equipments</h2>
       </Row>
       <Row className="mb-5">
-        <EquipmentCarousel props={uniqueEquipments} />
+        {noEquipMsg}
       </Row>
       <Row className="mb-3 d-flex text-center text-md-start">
         <h2 className="text-decoration-underline">Ingredients</h2>
@@ -107,7 +109,7 @@ export default async function Recipes({ params }) {
                 <li key={ingredient.id}>
                   <p>
                     {ingredient.amount + " " + ingredient.unit + " "}
-                    <label className="fw-bolder fs-5">{ingredient.originalName}</label>
+                    <span className="fw-bolder fs-5">{ingredient.originalName}</span>
                   </p>
                 </li>
               );
