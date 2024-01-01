@@ -17,6 +17,7 @@ export default async function Home() {
               alt="Home"
               fill
               style={{ objectFit: "cover" }}
+              objectPosition='50% 60%'
               priority
               className="rounded-3"
               sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33.3vw"
