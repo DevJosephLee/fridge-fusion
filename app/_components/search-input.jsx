@@ -12,7 +12,13 @@ export default function SearchInput() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    router.push(`/search/${inputValue}`);
+    if (!inputValue) {
+      return;
+    }
+
+    const encodedInputValue = encodeURIComponent(inputValue);
+
+    router.push(`/search/${encodedInputValue}`);
   }
 
   return (
