@@ -108,7 +108,7 @@ export default async function Recipes({ params }) {
               return (
                 <li key={ingredient.id}>
                   <p>
-                    {ingredient.amount + " " + ingredient.unit + " "}
+                    {Math.round(ingredient.amount * 100) / 100 + " " + ingredient.unit + " "}
                     <span className="fw-bolder fs-5">{ingredient.originalName}</span>
                   </p>
                 </li>
