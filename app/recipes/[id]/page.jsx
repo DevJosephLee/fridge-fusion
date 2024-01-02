@@ -34,15 +34,13 @@ export default async function Recipes({ params }) {
   };
 
   const uniqueIngredients = removeDuplicates(recipeData.extendedIngredients);
-  const uniqueEquipments = removeDuplicates(recipeData.analyzedInstructions[0].steps
-    .flatMap(step => step.equipment)
-    .filter(item => item));
-
   const nutritionData = [0, 3, 5, 7, 8, 1, 2].map(index => {
     return recipeData.nutrition.nutrients[index];
   });
-
-  const noEquipMsg = uniqueEquipments.length >= 1 ? <EquipmentCarousel props={uniqueEquipments} /> : <label className="fst-italic">Equipment Data Not Available</label>;
+  const analyzedInstructionsIncluded = recipeData.analyzedInstructions.length >= 1;
+  const uniqueEquipments = analyzedInstructionsIncluded >= 1 ? removeDuplicates(recipeData.analyzedInstructions[0].steps
+    .flatMap(step => step.equipment)
+    .filter(item => item)) : [];
 
   return (
     <Container className="my-4">
@@ -96,7 +94,9 @@ export default async function Recipes({ params }) {
         <h2 className="text-decoration-underline">Equipments</h2>
       </Row>
       <Row className="mb-5">
-        {noEquipMsg}
+        {
+          analyzedInstructionsIncluded ? <EquipmentCarousel props={uniqueEquipments} /> : <label className="fst-italic">Equipments Data Not Available</label>
+        }
       </Row>
       <Row className="mb-3 d-flex text-center text-md-start">
         <h2 className="text-decoration-underline">Ingredients</h2>
@@ -120,16 +120,16 @@ export default async function Recipes({ params }) {
       <Row className="mb-3 d-flex text-center text-md-start">
         <h2 className="text-decoration-underline">Instructions</h2>
       </Row>
-      <Row className="mb-5" style={{ padding: "0 12px" }}>
+      <Row className="mb-5" style={{ padding: `0 ${analyzedInstructionsIncluded ? "12px" : "0"}` }}>
         <ol>
           {
-            recipeData.analyzedInstructions[0].steps.map(steps => {
+            analyzedInstructionsIncluded ? recipeData.analyzedInstructions[0].steps.map(steps => {
               return (
                 <li key={steps.number}>
                   <p>{steps.step}</p>
                 </li>
               );
-            })
+            }) : <label className="fst-italic">Instructions Data Not Available</label>
           }
         </ol>
       </Row>
