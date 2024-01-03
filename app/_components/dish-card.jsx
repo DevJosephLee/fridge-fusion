@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { AccessTime, Whatshot } from '@mui/icons-material'
-import { Card, Col, Row, Button, Container } from 'react-bootstrap'
+import { Card, Col, Row } from 'react-bootstrap'
 import { usePathname } from 'next/navigation'
 
 export default function DishCard(props) {
