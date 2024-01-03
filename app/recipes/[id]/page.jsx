@@ -68,7 +68,7 @@ export default async function Recipes({ params }) {
           </Row>
         </Col>
         <Col className="mb-4 mb-md-0">
-          <div style={{ position: "relative", height: "350px" }}>
+          <div style={{ position: "relative", height: "400px" }}>
             <Image
               src={recipeData.image}
               alt={recipeData.title}
@@ -95,7 +95,7 @@ export default async function Recipes({ params }) {
       </Row>
       <Row className="mb-5">
         {
-          analyzedInstructionsIncluded ? <EquipmentCarousel props={uniqueEquipments} /> : <label className="fst-italic">Equipments Data Not Available</label>
+          uniqueEquipments.length >= 1 ? <EquipmentCarousel props={uniqueEquipments} /> : <label className="fst-italic">Equipments Data Not Available</label>
         }
       </Row>
       <Row className="mb-3 d-flex text-center text-md-start">
