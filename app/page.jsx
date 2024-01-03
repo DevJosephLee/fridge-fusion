@@ -1,7 +1,7 @@
-import Image from 'next/image'
-import { Col, Container, Row } from 'react-bootstrap'
-import DishCard from './_components/dish-card'
-import SearchInput from './_components/search-input'
+import Image from 'next/image';
+import { Col, Container, Row } from 'react-bootstrap';
+import DishCard from './_components/dish-card';
+import SearchInput from './_components/search-input';
 
 export default async function Home() {
   const res = await fetch(`https://api.spoonacular.com/recipes/random?number=4&apiKey=${process.env.NEXT_PUBLIC_SPOONACULAR_API_KEY}`);
@@ -42,15 +42,16 @@ export default async function Home() {
               title: randomRecipeData.title,
               readyInMinutes: randomRecipeData.readyInMinutes,
               calories: randomRecipeData.summary.split("calories")[0].split("<b>").pop().replace(" ", "")
-            }
+            };
+
             return (
               <Col md={12} lg={6} xl={4} key={randomRecipeData.id} className="flex-basis mb-4 mb-xl-0">
                 <DishCard {...randomRecipeProps} />
               </Col>
-            )
+            );
           })
         }
       </Row>
     </Container>
-  )
-}
+  );
+};
