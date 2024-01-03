@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Col, Container, Row } from 'react-bootstrap'
-import DishCard from './_components/dish-card';
-import SearchInput from './_components/search-input';
+import DishCard from './_components/dish-card'
+import SearchInput from './_components/search-input'
 
 export default async function Home() {
   const res = await fetch(`https://api.spoonacular.com/recipes/random?number=4&apiKey=${process.env.NEXT_PUBLIC_SPOONACULAR_API_KEY}`);
@@ -11,13 +11,12 @@ export default async function Home() {
     <Container className="my-4">
       <Row className="align-items-center mb-5 mb-md-3 d-block d-md-flex">
         <Col className="mb-4 mb-md-0">
-          <div style={{ position: "relative", height: "350px" }}>
+          <div style={{ position: "relative", height: "400px" }}>
             <Image
               src={`https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/image/upload/v1700869483/katie-smith-uQs1802D0CQ-unsplash_n7wgwf.jpg`}
               alt="Home"
               fill
-              style={{ objectFit: "cover" }}
-              objectPosition='50% 60%'
+              style={{ objectFit: "cover", objectPosition: "50% 60%" }}
               priority
               className="rounded-3"
               sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33.3vw"
