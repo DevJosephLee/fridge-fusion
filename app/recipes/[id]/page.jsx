@@ -1,9 +1,9 @@
-import Image from 'next/image'
-import { Col, Container, Row } from 'react-bootstrap'
-import { AccessTime, Whatshot } from '@mui/icons-material'
-import DishCard from '@/app/_components/dish-card'
-import EquipmentCarousel from '@/app/_components/equipment-carousel'
-import NutritionCarousel from '@/app/_components/nutrition-carousel'
+import Image from 'next/image';
+import { Col, Container, Row } from 'react-bootstrap';
+import { AccessTime, Whatshot } from '@mui/icons-material';
+import DishCard from '@/app/_components/dish-card';
+import EquipmentCarousel from '@/app/_components/equipment-carousel';
+import NutritionCarousel from '@/app/_components/nutrition-carousel';
 
 export default async function Recipes({ params }) {
   const id = params.id;
@@ -154,5 +154,5 @@ export default async function Recipes({ params }) {
         }
       </Row>
     </Container>
-  )
-}
+  );
+};
