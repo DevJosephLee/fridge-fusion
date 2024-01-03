@@ -1,7 +1,7 @@
 "use client"
 
-import { Col } from 'react-bootstrap'
-import Slider from 'react-slick'
+import { Col } from 'react-bootstrap';
+import Slider from 'react-slick';
 
 export default function NutritionCarousel({ props }) {
   const settings = {
@@ -41,7 +41,7 @@ export default function NutritionCarousel({ props }) {
           slidesToScroll: 2,
           infinite: false
         }
-      },
+      }
     ]
   };
 
@@ -54,9 +54,9 @@ export default function NutritionCarousel({ props }) {
               <h4>{nutrition.amount}&nbsp;{nutrition.unit}</h4>
               <label>{nutrition.name}</label>
             </Col>
-          )
+          );
         })
       }
     </Slider>
-  )
-}
+  );
+};

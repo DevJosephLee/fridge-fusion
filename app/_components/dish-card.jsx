@@ -1,10 +1,10 @@
 "use client"
 
-import Link from 'next/link'
-import Image from 'next/image'
-import { AccessTime, Whatshot } from '@mui/icons-material'
-import { Card, Col, Row } from 'react-bootstrap'
-import { usePathname } from 'next/navigation'
+import Link from 'next/link';
+import Image from 'next/image';
+import { AccessTime, Whatshot } from '@mui/icons-material';
+import { Card, Col, Row } from 'react-bootstrap';
+import { usePathname } from 'next/navigation';
 
 export default function DishCard(props) {
   const pathname = usePathname();
@@ -49,5 +49,5 @@ export default function DishCard(props) {
         </Link>
       </Row>
     </Card>
-  )
-}
+  );
+};

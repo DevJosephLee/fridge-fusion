@@ -1,9 +1,9 @@
 "use client"
 
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { Row, Col, Form } from 'react-bootstrap'
-import { Search, Clear } from '@mui/icons-material'
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { Row, Col, Form } from 'react-bootstrap';
+import { Search, Clear } from '@mui/icons-material';
 
 export default function SearchInput() {
   const [inputValue, setInputValue] = useState('');
@@ -41,5 +41,5 @@ export default function SearchInput() {
         </Col>
       </Row>
     </form>
-  )
-}
+  );
+};

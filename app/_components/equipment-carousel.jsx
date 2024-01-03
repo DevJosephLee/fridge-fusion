@@ -1,8 +1,8 @@
 "use client"
 
-import Image from 'next/image'
-import { Card, Col, Row, Container } from 'react-bootstrap'
-import Slider from 'react-slick'
+import Image from 'next/image';
+import { Card, Row } from 'react-bootstrap';
+import Slider from 'react-slick';
 
 export default function EquipmentCarousel({ props }) {
   const settings = {
@@ -34,7 +34,7 @@ export default function EquipmentCarousel({ props }) {
           slidesToScroll: 1,
           infinite: false
         }
-      },
+      }
     ]
   };
 
@@ -62,9 +62,9 @@ export default function EquipmentCarousel({ props }) {
                 <h5 className="text-center">{equipment.name}</h5>
               </Row>
             </Card>
-          )
+          );
         })
       }
     </Slider>
-  )
-}
+  );
+};

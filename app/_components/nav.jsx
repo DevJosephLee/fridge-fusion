@@ -17,5 +17,5 @@ export default function Nav(props) {
         </Col>
       </Container>
     </Navbar>
-  )
-}
+  );
+};
