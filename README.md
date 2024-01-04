@@ -18,6 +18,7 @@ https://fridge-fusion.vercel.app/
 - Next.js
 - Bootstrap 5
 - Spoonacular API
+- Vercel
 
 ## Features
 - Users can search dish recipes by ingredient, dish name, dish type.
@@ -32,9 +33,3 @@ https://fridge-fusion.vercel.app/
 ## Preview
 <img width="1728" alt="Screenshot 2024-01-03 at 9 32 28 PM" src="https://github.com/DevJosephLee/fridge-fusion/assets/68756038/1df1c0b1-910e-4bf1-a2c7-5f99706ec8fc">
 <img width="1728" alt="Screenshot 2024-01-03 at 9 32 57 PM" src="https://github.com/DevJosephLee/fridge-fusion/assets/68756038/77eb792e-6f87-4e22-9f58-df8074072099">
-
-
-
-## System Requirements
-- Node.js 14 or higher
-- NPM 6 or higher
