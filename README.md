@@ -9,7 +9,7 @@ My wife always struggles to find dish recipes with the available ingredients she
 Happy wife, happy life...
 
 ## Live Demo
-[https://chef-connect-1.herokuapp.com/](https://fridge-fusion.vercel.app/)
+(https://fridge-fusion.vercel.app/)
 
 ## Technologies Used
 - HTML5
