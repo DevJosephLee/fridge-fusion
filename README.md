@@ -25,6 +25,8 @@ Happy wife, happy life...
 - Users can see random dish recipes.
 - Users can view instructions on how to make the dish.
 - Users can view nutrition facts on the dish.
+- Users can view a list of ingredients for the dish.
+- Users can view a list of equipments for the dish.
 - Users can view similar recipes.
 
 ## Preview
