@@ -1,34 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FridgeFusion
 
-## Getting Started
+## Description
+A web application for food enthusiasts who want to search dish recipes. 
 
-First, run the development server:
+## Inspiration
+My wife always struggles to find dish recipes with the available ingredients she has in the fridge. Husband to the rescue! FridgeFusion allows users to search dish recipes based on ingredients, dish name or even the dish type. In the near future, I plan on implementing vast range of features such as login, comment, rating, as well as allowing users to share their own recipes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+Happy wife, happy life...
+
+## Live Demo
+[https://chef-connect-1.herokuapp.com/](https://fridge-fusion.vercel.app/)
+
+## Technologies Used
+- HTML5
+- CSS3
+- JavaScript
+- Next.js
+- Bootstrap 5
+- Spoonacular API
+
+## Features
+- Users can search dish recipes by ingredient, dish name, dish type.
+- Users can see a list of dish recipes based on their search.
+- Users can see random dish recipes.
+- Users can view instructions on how to make the dish.
+- Users can view nutrition facts on the dish.
+- Users can view similar recipes.
+
+## Preview
+<img width="1728" alt="Screenshot 2024-01-03 at 9 32 28 PM" src="https://github.com/DevJosephLee/fridge-fusion/assets/68756038/1df1c0b1-910e-4bf1-a2c7-5f99706ec8fc">
+<img width="1728" alt="Screenshot 2024-01-03 at 9 32 57 PM" src="https://github.com/DevJosephLee/fridge-fusion/assets/68756038/77eb792e-6f87-4e22-9f58-df8074072099">
+
+
+
+## System Requirements
+- Node.js 14 or higher
+- NPM 6 or higher
+
+## Instructions
+1. Clone repository
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+git clone git@github.com:DevJosephLee/chefconnect.git
+cd chefconnect
+```
+2. Install all dependecies with NPM
+```
+npm install
+```
+3. Create copy of `.env.example`
+```
+cp .env.example
+```
+4. Start project
+```
+npm run dev
+```
