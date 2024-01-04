@@ -40,8 +40,8 @@ Happy wife, happy life...
 ## Instructions
 1. Clone repository
 ```
-git clone git@github.com:DevJosephLee/chefconnect.git
-cd chefconnect
+git clone git@github.com:DevJosephLee/fridge-fusion.git
+cd fridge-fusion
 ```
 2. Install all dependecies with NPM
 ```
